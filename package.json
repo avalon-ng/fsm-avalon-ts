@@ -59,7 +59,7 @@
     "node": ">=8.9"
   },
   "dependencies": {
-    "fsm-reducer": "^1.0.2"
+    "fsm-reducer-ts": "^1.0.0"
   },
   "devDependencies": {
     "@types/chai": "^4.1.7",

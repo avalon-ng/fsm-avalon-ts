@@ -1,4 +1,4 @@
-const makeFSM = require('fsm-reducer');
+const makeFSM = require('../../build/main/fsm-reducer');
 const { expect } = require('chai');
 const { getFSM, actionCreators } = require('../../build/main/index');
 const {

@@ -1,8 +1,9 @@
 import {
   NEEDED_FAILED_LIST,
   NEEDED_KNIGHTS_LIST,
-  STATUS_BEFORE_INIT
+  DEFAULT_STATE
 } from './config';
+import { StateMap, ActionMap, ValidateMap, Vote, MissionStatus, StateFunction } from './types/fsm-avalon';
 
 const checkAssassinate: StateFunction = (state) => {
   const { assassinated, users } = state;
@@ -135,23 +136,7 @@ const ACTIONS: ActionMap = {
 };
 
 const STATE_MAP: StateMap = {
-  start: {
-    status: STATUS_BEFORE_INIT,
-    value: {
-      users: [],
-      knights: [],
-      votes: [],
-      votesResult: false,
-      failedVotes: 0,
-      missions: [],
-      missionResults: [],
-      captain: -1,
-      goddessResults: [],
-      assassinated: -1,
-      neededKnights: [],
-      neededFails: []
-    }
-  },
+  start: DEFAULT_STATE,
   states: {
     BEFORE_INIT: {
       INIT_GAME: 'INIT'

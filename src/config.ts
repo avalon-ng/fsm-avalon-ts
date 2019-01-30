@@ -1,3 +1,4 @@
+import { State, Value } from './types/fsm-avalon';
 const NEEDED_KNIGHTS_LIST: number[][] = [
   [2,3,2,3,3],
   [2,3,2,3,3],
@@ -63,6 +64,26 @@ const STATUS_GODDESS_FINISHED: string = 'GODDESS_FINISHED';
 const ACTION_DRAW_GODDESS_RESULT: string = 'DRAW_GODDESS_RESULT';
 const ACTION_EXECUTE_GODDESS: string = 'EXECUTE_GODDESS';
 
+const DEFAULT_VALUE: Value = {
+  users: [],
+  knights: [],
+  votes: [],
+  votesResult: false,
+  failedVotes: 0,
+  missions: [],
+  missionResults: [],
+  captain: -1,
+  goddessResults: [],
+  assassinated: -1,
+  neededKnights: [],
+  neededFails: []
+};
+
+const DEFAULT_STATE: State = {
+  status: 'BEFORE_INIT',
+  value: DEFAULT_VALUE
+};
+
 export {
   NEEDED_FAILED_LIST,
   NEEDED_KNIGHTS_LIST,
@@ -89,5 +110,7 @@ export {
   STATUS_GODDESS,
   STATUS_GODDESS_FINISHED,
   ACTION_DRAW_GODDESS_RESULT,
-  ACTION_EXECUTE_GODDESS
+  ACTION_EXECUTE_GODDESS,
+  DEFAULT_VALUE,
+  DEFAULT_STATE
 }
