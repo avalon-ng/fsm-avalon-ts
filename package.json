@@ -1,6 +1,6 @@
 {
   "name": "fsm-avalon-ts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Avalon game logic state machine for fsm-reducer in TypeScript",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
